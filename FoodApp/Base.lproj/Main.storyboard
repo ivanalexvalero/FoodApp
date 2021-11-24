@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="09s-dX-DL0">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="09s-dX-DL0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qdx-El-S9R">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="qdx-El-S9R">
                                     <size key="itemSize" width="414" height="658"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -28,7 +28,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="eQB-eH-pmD" customClass="OnboardingCollectionViewCell" customModule="FoodApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="658"/>
+                                        <rect key="frame" x="0.0" y="14" width="414" height="658"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NQo-jX-VBb">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="658"/>
@@ -41,18 +41,28 @@
                                                     <rect key="frame" x="16" y="557.5" width="382" height="84.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a favorite food here." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xr-Lq-M5Y">
-                                                            <rect key="frame" x="29" y="0.0" width="324" height="32.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="32.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRI-FF-G9J">
-                                                            <rect key="frame" x="1" y="48.5" width="380.5" height="36"/>
+                                                            <rect key="frame" x="0.0" y="48.5" width="382" height="36"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" systemColor="systemGray3Color"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="TRI-FF-G9J" firstAttribute="top" secondItem="7Xr-Lq-M5Y" secondAttribute="bottom" constant="16" id="8op-a6-evP"/>
+                                                        <constraint firstItem="7Xr-Lq-M5Y" firstAttribute="top" secondItem="5k3-Kc-J3F" secondAttribute="top" id="CMQ-pU-Fat"/>
+                                                        <constraint firstItem="TRI-FF-G9J" firstAttribute="top" secondItem="7Xr-Lq-M5Y" secondAttribute="bottom" constant="16" id="D3N-ry-XOe"/>
+                                                        <constraint firstItem="7Xr-Lq-M5Y" firstAttribute="leading" secondItem="5k3-Kc-J3F" secondAttribute="leading" id="EpX-z9-rc8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7Xr-Lq-M5Y" secondAttribute="trailing" id="JFs-V7-egw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TRI-FF-G9J" secondAttribute="trailing" id="Oq5-Tq-uZD"/>
+                                                        <constraint firstItem="TRI-FF-G9J" firstAttribute="leading" secondItem="5k3-Kc-J3F" secondAttribute="leading" id="luz-wJ-kt1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TRI-FF-G9J" secondAttribute="bottom" id="nBA-AN-MNi"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -79,6 +89,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WtP-ca-oW3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XKt-bs-hI5"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwd-zu-sc0">
                                 <rect key="frame" x="132" y="772" width="150" height="50"/>
