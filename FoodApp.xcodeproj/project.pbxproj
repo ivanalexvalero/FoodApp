@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		4F92E5FA27485F6B00E228B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E5F927485F6B00E228B2 /* AppDelegate.swift */; };
 		4F92E5FC27485F6B00E228B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E5FB27485F6B00E228B2 /* SceneDelegate.swift */; };
-		4F92E5FE27485F6B00E228B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E5FD27485F6B00E228B2 /* ViewController.swift */; };
 		4F92E60127485F6B00E228B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F92E5FF27485F6B00E228B2 /* Main.storyboard */; };
 		4F92E60327485F6F00E228B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92E60227485F6F00E228B2 /* Assets.xcassets */; };
 		4F92E60627485F6F00E228B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F92E60427485F6F00E228B2 /* LaunchScreen.storyboard */; };
+		4F92E6132748718900E228B2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E6122748718900E228B2 /* OnboardingViewController.swift */; };
+		4F92E6162748781F00E228B2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E6152748781F00E228B2 /* UIViewExtension.swift */; };
+		4F92E61927487BA800E228B2 /* OnboardingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E61827487BA800E228B2 /* OnboardingSlider.swift */; };
+		4F92E61B274882B400E228B2 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E61A274882B400E228B2 /* OnboardingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F92E5F627485F6B00E228B2 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F92E5F927485F6B00E228B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F92E5FB27485F6B00E228B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F92E5FD27485F6B00E228B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F92E60027485F6B00E228B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F92E60227485F6F00E228B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F92E60527485F6F00E228B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F92E60727485F6F00E228B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F92E6122748718900E228B2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4F92E6152748781F00E228B2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		4F92E61827487BA800E228B2 /* OnboardingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlider.swift; sourceTree = "<group>"; };
+		4F92E61A274882B400E228B2 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +63,57 @@
 			isa = PBXGroup;
 			children = (
 				4F92E5F927485F6B00E228B2 /* AppDelegate.swift */,
+				4F92E614274877E800E228B2 /* Extensions */,
+				4F92E60F2748706800E228B2 /* CustomViews */,
+				4F92E60E2748705A00E228B2 /* Views */,
+				4F92E60D2748704400E228B2 /* Models */,
 				4F92E5FB27485F6B00E228B2 /* SceneDelegate.swift */,
-				4F92E5FD27485F6B00E228B2 /* ViewController.swift */,
 				4F92E5FF27485F6B00E228B2 /* Main.storyboard */,
 				4F92E60227485F6F00E228B2 /* Assets.xcassets */,
 				4F92E60427485F6F00E228B2 /* LaunchScreen.storyboard */,
 				4F92E60727485F6F00E228B2 /* Info.plist */,
 			);
 			path = FoodApp;
+			sourceTree = "<group>";
+		};
+		4F92E60D2748704400E228B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F92E61827487BA800E228B2 /* OnboardingSlider.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4F92E60E2748705A00E228B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F92E6102748709900E228B2 /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4F92E60F2748706800E228B2 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		4F92E6102748709900E228B2 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4F92E6122748718900E228B2 /* OnboardingViewController.swift */,
+				4F92E61A274882B400E228B2 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4F92E614274877E800E228B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4F92E6152748781F00E228B2 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F92E5FE27485F6B00E228B2 /* ViewController.swift in Sources */,
 				4F92E5FA27485F6B00E228B2 /* AppDelegate.swift in Sources */,
 				4F92E5FC27485F6B00E228B2 /* SceneDelegate.swift in Sources */,
+				4F92E6162748781F00E228B2 /* UIViewExtension.swift in Sources */,
+				4F92E61927487BA800E228B2 /* OnboardingSlider.swift in Sources */,
+				4F92E6132748718900E228B2 /* OnboardingViewController.swift in Sources */,
+				4F92E61B274882B400E228B2 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
