@@ -16,6 +16,17 @@ class OnboardingViewController: UIViewController {
     
     var slides: [OnboardingSlider] = []
     
+    var currentPage = 0 {
+        didSet {
+            pageControl.currentPage = currentPage
+            if currentPage == slides.count - 1 {
+                nextButton.setTitle("Empezar", for: .normal)
+            } else {
+                nextButton.setTitle("Siguiente", for: .normal)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +40,14 @@ class OnboardingViewController: UIViewController {
     
 
     @IBAction func nextButtonAction(_ sender: Any) {
+        
+        if currentPage == slides.count - 1 {
+            print("Siguiente Pagina")
+        } else {
+            currentPage += 1
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionControl.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
     }
 }
 
@@ -50,6 +69,12 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        currentPage = Int(scrollView.contentOffset.x / width)
+        
     }
     
     
