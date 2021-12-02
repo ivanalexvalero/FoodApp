@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F7108002758454F004FD575 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7107FE2758454F004FD575 /* PopularCollectionViewCell.swift */; };
+		4F7108012758454F004FD575 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7107FF2758454F004FD575 /* PopularCollectionViewCell.xib */; };
 		4F92E5FA27485F6B00E228B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E5F927485F6B00E228B2 /* AppDelegate.swift */; };
 		4F92E5FC27485F6B00E228B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E5FB27485F6B00E228B2 /* SceneDelegate.swift */; };
 		4F92E60127485F6B00E228B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F92E5FF27485F6B00E228B2 /* Main.storyboard */; };
@@ -21,10 +23,13 @@
 		4F99335D275055EB009B2187 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F99335B275055EB009B2187 /* CategoryCollectionViewCell.xib */; };
 		4F99335F27505C43009B2187 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99335E27505C43009B2187 /* CategoryModel.swift */; };
 		4F99336127505FF8009B2187 /* UrlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99336027505FF8009B2187 /* UrlExtension.swift */; };
+		4FFDC7B22758318100464FE3 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDC7B12758318100464FE3 /* CellView.swift */; };
 		B0136D44B65C734E8C7B1369 /* Pods_FoodApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEDC5C09A949F469812062D /* Pods_FoodApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F7107FE2758454F004FD575 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F7107FF2758454F004FD575 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F92E5F627485F6B00E228B2 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F92E5F927485F6B00E228B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F92E5FB27485F6B00E228B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		4F99335B275055EB009B2187 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F99335E27505C43009B2187 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		4F99336027505FF8009B2187 /* UrlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExtension.swift; sourceTree = "<group>"; };
+		4FFDC7B12758318100464FE3 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		DC1D302F07850002E8AD24D9 /* Pods-FoodApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp.release.xcconfig"; path = "Target Support Files/Pods-FoodApp/Pods-FoodApp.release.xcconfig"; sourceTree = "<group>"; };
 		FAEDC5C09A949F469812062D /* Pods_FoodApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAE276DEE47402E7EED171A /* Pods-FoodApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp.debug.xcconfig"; path = "Target Support Files/Pods-FoodApp/Pods-FoodApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +71,15 @@
 				DC1D302F07850002E8AD24D9 /* Pods-FoodApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4F7107FD27584515004FD575 /* PopularCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4F7107FF2758454F004FD575 /* PopularCollectionViewCell.xib */,
+				4F7107FE2758454F004FD575 /* PopularCollectionViewCell.swift */,
+			);
+			path = PopularCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		4F92E5ED27485F6B00E228B2 = {
@@ -123,6 +138,7 @@
 		4F92E60F2748706800E228B2 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				4FFDC7B02758310800464FE3 /* CellView */,
 				4F9933582750557E009B2187 /* CollectionViewCells */,
 			);
 			path = CustomViews;
@@ -157,6 +173,7 @@
 		4F9933582750557E009B2187 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				4F7107FD27584515004FD575 /* PopularCollectionViewCell */,
 				4F99335927505591009B2187 /* CategoryCollectionViewCell */,
 			);
 			path = CollectionViewCells;
@@ -169,6 +186,14 @@
 				4F99335A275055EB009B2187 /* CategoryCollectionViewCell.swift */,
 			);
 			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		4FFDC7B02758310800464FE3 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				4FFDC7B12758318100464FE3 /* CellView.swift */,
+			);
+			path = CellView;
 			sourceTree = "<group>";
 		};
 		A25C2E9AFE460887CD78450E /* Frameworks */ = {
@@ -243,6 +268,7 @@
 				4F92E60627485F6F00E228B2 /* LaunchScreen.storyboard in Resources */,
 				4F92E60327485F6F00E228B2 /* Assets.xcassets in Resources */,
 				4F92E60127485F6B00E228B2 /* Main.storyboard in Resources */,
+				4F7108012758454F004FD575 /* PopularCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7108002758454F004FD575 /* PopularCollectionViewCell.swift in Sources */,
+				4FFDC7B22758318100464FE3 /* CellView.swift in Sources */,
 				4F99335C275055EB009B2187 /* CategoryCollectionViewCell.swift in Sources */,
 				4F92E5FA27485F6B00E228B2 /* AppDelegate.swift in Sources */,
 				4F92E5FC27485F6B00E228B2 /* SceneDelegate.swift in Sources */,
