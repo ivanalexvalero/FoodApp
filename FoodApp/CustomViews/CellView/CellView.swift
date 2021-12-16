@@ -10,7 +10,7 @@ import UIKit
 import Accelerate
 
 
-class CellView: UIView {
+final class CellView: UIView {
     
     
     override init(frame: CGRect) {
@@ -33,3 +33,4 @@ class CellView: UIView {
     }
     
 }
+
