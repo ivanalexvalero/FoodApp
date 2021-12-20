@@ -28,8 +28,8 @@ class HomeViewController: UIViewController {
     
     
     var populars: [DishModel] = [
-        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
-        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/200", calories: 30.346612),
+        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
+        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/200", calories: 30.346612),
         .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
         .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
         .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
@@ -38,10 +38,10 @@ class HomeViewController: UIViewController {
     
     
     var specials: [DishModel] = [
+        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección-De espinaca, con salsa roja y salsa blanca a elección-De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
         .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
         .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
-        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
-        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
+        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección-De espinaca, con salsa roja y salsa blanca a elección-De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
         .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
         .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
     
@@ -105,7 +105,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == categoryCollectionView {
-            
+            let controller = ListDishesViewController.instantiate()
+            controller.category = categories[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
         } else {
             
             let controller = DishDetailViewController.instantiate()

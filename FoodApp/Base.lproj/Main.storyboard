@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VUq-gj-Vd6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VUq-gj-Vd6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -116,7 +116,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Cuh-De-fyY">
-                                <rect key="frame" x="129.5" y="730" width="155.5" height="26"/>
+                                <rect key="frame" x="149.5" y="730" width="115.5" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="systemGray4Color"/>
                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
@@ -340,8 +340,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hpa-cg-NUc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="7Ci-OW-3Qf"/>
                         <barButtonItem key="rightBarButtonItem" image="cart.circle" catalog="system" id="sna-p8-Nzu">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="972-Ql-oTV" kind="show" id="yEy-Aq-1rK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -354,6 +358,41 @@
             </objects>
             <point key="canvasLocation" x="1657.9710144927537" y="79.6875"/>
         </scene>
+        <!--List Orders View Controller-->
+        <scene sceneID="4mm-Tw-0RV">
+            <objects>
+                <viewController storyboardIdentifier="ListOrdersViewController" id="972-Ql-oTV" customClass="ListOrdersViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="caO-iX-Zf9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="slr-Ra-whT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="972-Ql-oTV" id="y9D-5R-vPX"/>
+                                    <outlet property="delegate" destination="972-Ql-oTV" id="r0B-ts-Mde"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P1r-Dt-bXZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="slr-Ra-whT" firstAttribute="top" secondItem="P1r-Dt-bXZ" secondAttribute="top" id="AeI-JG-fRO"/>
+                            <constraint firstItem="slr-Ra-whT" firstAttribute="leading" secondItem="P1r-Dt-bXZ" secondAttribute="leading" id="D3S-6v-9hc"/>
+                            <constraint firstItem="slr-Ra-whT" firstAttribute="trailing" secondItem="P1r-Dt-bXZ" secondAttribute="trailing" id="GSs-Yb-WXG"/>
+                            <constraint firstAttribute="bottom" secondItem="slr-Ra-whT" secondAttribute="bottom" id="vbJ-GU-a2B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZhD-Da-2gU"/>
+                    <connections>
+                        <outlet property="tableView" destination="slr-Ra-whT" id="NyW-FS-H3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVu-Yx-awp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657.9710144927537" y="744.64285714285711"/>
+        </scene>
         <!--Dish Detail View Controller-->
         <scene sceneID="dC1-0E-nKx">
             <objects>
@@ -362,7 +401,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LGv-ZS-TK1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LGv-ZS-TK1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="542.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eu7-4H-ySd">
@@ -418,6 +457,11 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="detailButtonAction:" destination="WAa-H6-h71" eventType="touchUpInside" id="Rit-Bx-abR"/>
                                         </connections>
@@ -448,6 +492,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ad-aC-Oz3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2424.6376811594205" y="79.6875"/>
+        </scene>
+        <!--List Dishes View Controller-->
+        <scene sceneID="265-5u-KDr">
+            <objects>
+                <viewController storyboardIdentifier="ListDishesViewController" id="3v1-SU-Lxc" customClass="ListDishesViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aQy-m5-PTl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mFc-zw-npt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3v1-SU-Lxc" id="o9Q-mg-XVW"/>
+                                    <outlet property="delegate" destination="3v1-SU-Lxc" id="awN-RH-FMl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fO0-Wr-oHW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mFc-zw-npt" firstAttribute="leading" secondItem="fO0-Wr-oHW" secondAttribute="leading" id="VFq-iF-0fh"/>
+                            <constraint firstItem="mFc-zw-npt" firstAttribute="trailing" secondItem="fO0-Wr-oHW" secondAttribute="trailing" id="azr-73-84L"/>
+                            <constraint firstItem="mFc-zw-npt" firstAttribute="top" secondItem="fO0-Wr-oHW" secondAttribute="top" id="w3Q-GR-1d3"/>
+                            <constraint firstAttribute="bottom" secondItem="mFc-zw-npt" secondAttribute="bottom" id="w6h-vt-IPl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="mFc-zw-npt" id="JLi-rG-EBn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oN0-qG-aC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3198.5507246376815" y="79.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r5j-gd-AwY">
