@@ -6,6 +6,7 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import SwiftUI
 import Kingfisher
 
@@ -26,4 +27,11 @@ class PopularCollectionViewCell: UICollectionViewCell {
         descriptionPopular.text = popular.description
     }
     
+=======
+
+class PopularCollectionViewCell: UICollectionViewCell {
+
+    static let kId = "PopularCollectionViewCell"
+    
+>>>>>>> CreandoHomeParte2
 }

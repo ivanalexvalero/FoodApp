@@ -14,7 +14,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
+<<<<<<< HEAD
     @IBOutlet weak var specialCollectionView: UICollectionView!
+=======
+>>>>>>> CreandoHomeParte2
     
     
     
@@ -24,6 +27,7 @@ class HomeViewController: UIViewController {
         .init(id: "id3", name: "Empanadas", image: "https://picsum.photos/100/100"),
         .init(id: "id4", name: "Empanadas", image: "https://picsum.photos/100/100"),
         .init(id: "id5", name: "Empanadas", image: "https://picsum.photos/100/100")
+<<<<<<< HEAD
     ]
     
     
@@ -45,6 +49,8 @@ class HomeViewController: UIViewController {
         .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
         .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
     
+=======
+>>>>>>> CreandoHomeParte2
     ]
     
     override func viewDidLoad() {
@@ -57,11 +63,20 @@ class HomeViewController: UIViewController {
     
     private func registerCells() {
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.kIdentifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.kIdentifier)
+<<<<<<< HEAD
     
         popularCollectionView.register(UINib(nibName: PopularCollectionViewCell.kId, bundle: nil), forCellWithReuseIdentifier: PopularCollectionViewCell.kId)
         
         specialCollectionView.register(UINib(nibName: SpecialCollectionViewCell.kidSpecial, bundle: nil), forCellWithReuseIdentifier: SpecialCollectionViewCell.kidSpecial)
 
+=======
+        
+        
+        
+        
+        
+        popularCollectionView.register(UINib(nibName: CategoryCollectionViewCell.kIdentifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.kIdentifier)
+>>>>>>> CreandoHomeParte2
     }
    
 
@@ -71,6 +86,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+<<<<<<< HEAD
         
         switch collectionView {
         case categoryCollectionView:
@@ -81,10 +97,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 return specials.count
         default: return 0
         }
+=======
+        return categories.count
+>>>>>>> CreandoHomeParte2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+<<<<<<< HEAD
         
         switch collectionView {
         case categoryCollectionView:
@@ -116,5 +136,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             navigationController?.pushViewController(controller, animated: true)
         }
     }
+=======
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.kIdentifier, for: indexPath) as! CategoryCollectionViewCell
+        cell.setup(category: categories[indexPath.row])
+        return cell
+    }
+    
+>>>>>>> CreandoHomeParte2
     
 }

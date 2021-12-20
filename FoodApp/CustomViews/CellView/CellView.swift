@@ -10,7 +10,11 @@ import UIKit
 import Accelerate
 
 
+<<<<<<< HEAD
 final class CellView: UIView {
+=======
+class CellView: UIView {
+>>>>>>> CreandoHomeParte2
     
     
     override init(frame: CGRect) {
@@ -33,4 +37,7 @@ final class CellView: UIView {
     }
     
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> CreandoHomeParte2
