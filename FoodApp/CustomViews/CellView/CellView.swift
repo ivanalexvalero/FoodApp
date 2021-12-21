@@ -10,7 +10,7 @@ import UIKit
 import Accelerate
 
 
-<<<<<<< HEAD
+
 final class CellView: UIView {
 =======
 class CellView: UIView {
