@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryCollectionViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+<<<<<<< HEAD
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CategoryCollectionViewCell" reuseIdentifier="CategoryCollectionViewCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="FoodApp" customModuleProvider="target">
+=======
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CategoryCollectionViewCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="FoodApp" customModuleProvider="target">
+>>>>>>> CreandoHomeParte2
+            <rect key="frame" x="0.0" y="0.0" width="150" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="56"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyc-7g-E0t" customClass="CellView" customModule="FoodApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="56"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QC5-3E-qZf">
+                                <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="VgV-Wf-WpU"/>
+                                    <constraint firstAttribute="height" constant="40" id="prA-p3-zSt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1X-SL-UL1">
+                                <rect key="frame" x="56" y="20" width="86" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g1X-SL-UL1" firstAttribute="leading" secondItem="QC5-3E-qZf" secondAttribute="trailing" constant="8" id="2Cf-eZ-SYt"/>
+                            <constraint firstAttribute="width" constant="150" id="2Zn-kd-J7h"/>
+                            <constraint firstItem="QC5-3E-qZf" firstAttribute="leading" secondItem="lyc-7g-E0t" secondAttribute="leading" constant="8" id="A38-C2-B1p"/>
+                            <constraint firstAttribute="bottom" secondItem="QC5-3E-qZf" secondAttribute="bottom" constant="8" id="Md3-ey-QBI"/>
+                            <constraint firstItem="QC5-3E-qZf" firstAttribute="top" secondItem="lyc-7g-E0t" secondAttribute="top" constant="8" id="Vu7-pz-8yZ"/>
+                            <constraint firstItem="g1X-SL-UL1" firstAttribute="centerY" secondItem="QC5-3E-qZf" secondAttribute="centerY" id="dwb-Vp-dd6"/>
+                            <constraint firstAttribute="height" constant="56" id="h4C-uW-LUt"/>
+                            <constraint firstAttribute="trailing" secondItem="g1X-SL-UL1" secondAttribute="trailing" constant="8" id="oHc-XA-yKg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="lyc-7g-E0t" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DeE-n3-cPx"/>
+                <constraint firstItem="lyc-7g-E0t" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NiE-Q4-Z4b"/>
+                <constraint firstAttribute="trailing" secondItem="lyc-7g-E0t" secondAttribute="trailing" id="RtN-Tk-GSW"/>
+                <constraint firstAttribute="bottom" secondItem="lyc-7g-E0t" secondAttribute="bottom" id="X4c-XH-dXW"/>
+            </constraints>
+            <size key="customSize" width="150" height="56"/>
+            <connections>
+                <outlet property="categoryImageView2" destination="QC5-3E-qZf" id="JSO-e2-1G5"/>
+                <outlet property="categoryTitle" destination="g1X-SL-UL1" id="z71-w2-rQj"/>
+            </connections>
+            <point key="canvasLocation" x="321.73913043478262" y="96.428571428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

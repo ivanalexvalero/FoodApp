@@ -35,14 +35,17 @@ class OnboardingViewController: UIViewController {
             OnboardingSlider(title: "PÁGALO COMO QUIERAS", description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.", image: #imageLiteral(resourceName: "Page") ),
             OnboardingSlider(title: "NOSOTROS TE LO LLEVAMOS", description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.", image: #imageLiteral(resourceName: "Delivery") )
         ]
-
+        pageControl.numberOfPages = slides.count
     }
     
 
     @IBAction func nextButtonAction(_ sender: Any) {
         
         if currentPage == slides.count - 1 {
-            print("Siguiente Pagina")
+            let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as! UIViewController
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .flipHorizontal
+            present(controller, animated: true, completion: nil)
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
