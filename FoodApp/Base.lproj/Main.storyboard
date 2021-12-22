@@ -155,13 +155,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qtl-Ry-JSh">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-<<<<<<< HEAD
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2ZK-f3-Csv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="726"/>
-=======
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2ZK-f3-Csv">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="702"/>
->>>>>>> CreandoHomeParte2
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1m7-f0-tiU">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
@@ -178,11 +173,7 @@
                                                     </label>
                                                     <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-hz-tUu">
                                                         <rect key="frame" x="0.0" y="48" width="414" height="122"/>
-<<<<<<< HEAD
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-=======
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
->>>>>>> CreandoHomeParte2
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="122" id="wWQ-ci-4Vx"/>
                                                         </constraints>
@@ -221,11 +212,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vf-wE-ytm">
-<<<<<<< HEAD
-                                                <rect key="frame" x="0.0" y="190" width="414" height="348"/>
-=======
                                                 <rect key="frame" x="0.0" y="178" width="414" height="348"/>
->>>>>>> CreandoHomeParte2
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Más elegidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iaz-Za-Bqo">
                                                         <rect key="frame" x="0.0" y="16" width="414" height="24"/>
@@ -278,11 +265,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSL-fo-FRM">
-<<<<<<< HEAD
-                                                <rect key="frame" x="0.0" y="558" width="414" height="168"/>
-=======
                                                 <rect key="frame" x="0.0" y="534" width="414" height="168"/>
->>>>>>> CreandoHomeParte2
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Especialidades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSB-89-dpx">
                                                         <rect key="frame" x="0.0" y="16" width="414" height="24"/>
@@ -368,10 +351,6 @@
                     <connections>
                         <outlet property="categoryCollectionView" destination="rbX-hz-tUu" id="PRB-2n-DYa"/>
                         <outlet property="popularCollectionView" destination="mEh-CU-cmg" id="Pbm-ix-6iT"/>
-<<<<<<< HEAD
-                        <outlet property="specialCollectionView" destination="2Yy-sj-uA9" id="TKh-Jq-00V"/>
-=======
->>>>>>> CreandoHomeParte2
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eZ-bn-GJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
