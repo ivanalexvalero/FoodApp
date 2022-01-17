@@ -10,6 +10,9 @@ import Foundation
 
 struct NetworkService {
     
+    private func request<T: Codable>(route: Route, method: Method, parameters: [String: Any]? = nil, type: T.Type, completion: (Result<T, Error>)-> Void) {
+        
+    }
     
     /// Esta función ayuda a generar una solicitud url
     /// - Parameters:
@@ -17,7 +20,7 @@ struct NetworkService {
     ///   - method: tipo de solicitud que se realizará
     ///   - parameters: cualquier info extra que se necesite pasar al backend
     /// - Returns: la solicitud de url
-    func createRequest(route: Route,
+    private func createRequest(route: Route,
                                method: Method,
                                parameters: [String: Any]? = nil) -> URLRequest? {
         let urlString = Route.baseUrl + route.description

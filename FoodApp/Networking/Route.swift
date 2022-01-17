@@ -9,7 +9,7 @@ import Foundation
 
 
 enum Route {
-    static let baseUrl = "https://foodapp.com"
+    static let baseUrl = "https://yummie.glitch.me"
     
     case temp
     
