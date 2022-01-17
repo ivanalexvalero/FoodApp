@@ -11,7 +11,7 @@ import Foundation
 struct NetworkService {
     
     private func request<T: Codable>(route: Route, method: Method, parameters: [String: Any]? = nil, type: T.Type, completion: (Result<T, Error>)-> Void) {
-        
+         
     }
     
     /// Esta función ayuda a generar una solicitud url
