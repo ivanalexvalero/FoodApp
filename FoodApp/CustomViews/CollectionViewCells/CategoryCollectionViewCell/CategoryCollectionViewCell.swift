@@ -9,16 +9,18 @@ import UIKit
 import Kingfisher
 
 class CategoryCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var categoryImageView: UIImageView!
-    @IBOutlet weak var categoryTitle: UILabel!
     
+    static let kIdentifier = "CategoryCollectionViewCell"
+
+
+    @IBOutlet weak var categoryImageView2: UIImageView!
+    
+    @IBOutlet weak var categoryTitle: UILabel!
     
     
     func setup(category: CategoryModel) {
         categoryTitle.text = category.name
-        categoryImageView.kf.setImage(with: category.image.asUrl)
-        
+        categoryImageView2.kf.setImage(with: category.image.asUrl)
     }
     
 }
