@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import ProgressHUD
 
 class DishDetailViewController: UIViewController {
     
@@ -33,6 +34,19 @@ class DishDetailViewController: UIViewController {
     
     
     @IBAction func detailButtonAction(_ sender: UIButton) {
+        guard let name = detailName.text?.trimmingCharacters(in: .whitespaces), !name.isEmpty else {
+            ProgressHUD.showError("Porfavor ingrese su nombre")
+            return
+        }
+        ProgressHUD.show("Coloca tu orden...")
+        NetworkService.shared.placeOrder(dishId: dish.id ?? "", name: name) { [weak self] (result) in
+            switch result {
+            case .success(_):
+                ProgressHUD.showSucceed("Tu orden ha sido recibida👨🏻‍🍳")
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
     }
     
 }

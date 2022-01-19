@@ -9,6 +9,12 @@ import Foundation
 
 
 
-struct CategoryModel {
-    let id, name, image: String
+struct CategoryModel: Decodable {
+    let id, name, image: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name = "title"
+        case image
+    }
 }
