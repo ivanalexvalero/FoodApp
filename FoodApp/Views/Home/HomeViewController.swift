@@ -7,6 +7,8 @@
 
 import UIKit
 import Kingfisher
+import ProgressHUD
+
 
 class HomeViewController: UIViewController {
 
@@ -19,36 +21,9 @@ class HomeViewController: UIViewController {
     
     
     
-    var categories: [CategoryModel] = [
-        .init(id: "id1", name: "Empanadas", image: "https://picsum.photos/100/100"),
-        .init(id: "id2", name: "Empanadas", image: "https://picsum.photos/100/100"),
-        .init(id: "id3", name: "Empanadas", image: "https://picsum.photos/100/100"),
-        .init(id: "id4", name: "Empanadas", image: "https://picsum.photos/100/100"),
-        .init(id: "id5", name: "Empanadas", image: "https://picsum.photos/100/100")
-
-    ]
-    
-    
-    var populars: [DishModel] = [
-        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
-        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón,Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/200", calories: 30.346612),
-        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
-        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
-        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
-        .init(id: "id1", title: "Pizza", description: "Pizza especial con jamon, aceitunas y morrón", image: "https://picsum.photos/100/100", calories: 30.346612),
-    ]
-    
-    
-    var specials: [DishModel] = [
-        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección-De espinaca, con salsa roja y salsa blanca a elección-De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
-        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
-        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
-        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección-De espinaca, con salsa roja y salsa blanca a elección-De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
-        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
-        .init(id: "id1", title: "Canelones", description: "De espinaca, con salsa roja y salsa blanca a elección", image: "https://picsum.photos/100/100", calories: 41.9921),
-    
-
-    ]
+    var categories: [CategoryModel] = []
+    var populars: [DishModel] = []
+    var specials: [DishModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +31,24 @@ class HomeViewController: UIViewController {
         title = "Food App"
         
         registerCells()
+        
+        ProgressHUD.show()
+        
+        NetworkService.shared.fetchAllCategories { [weak self] result in
+            switch result {
+            case .success(let allDishes):
+                ProgressHUD.dismiss()
+                self?.categories = allDishes.categories ?? []
+                self?.populars = allDishes.populars ?? []
+                self?.specials = allDishes.specials ?? []
+                
+                self?.categoryCollectionView.reloadData()
+                self?.popularCollectionView.reloadData()
+                self?.specialCollectionView.reloadData()
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
     }
     
     private func registerCells() {

@@ -20,7 +20,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     func setup(category: CategoryModel) {
         categoryTitle.text = category.name
-        categoryImageView2.kf.setImage(with: category.image.asUrl)
+        categoryImageView2.kf.setImage(with: category.image?.asUrl)
     }
     
 }

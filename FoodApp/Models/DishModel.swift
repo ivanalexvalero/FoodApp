@@ -9,12 +9,19 @@ import Foundation
 
 
 
-struct DishModel {
+struct DishModel: Decodable {
     let id, title, description, image: String?
-    let calories: Double?
+    let calories: Int?
     
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title = "name"
+        case description
+        case image
+        case calories
+    }
     
     var formatCalories: String {
-        return String(format: "%.2f calories", calories ?? 0)
+        return "\(calories ?? 0) calorias"
     }
 }

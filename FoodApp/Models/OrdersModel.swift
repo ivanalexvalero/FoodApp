@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct OrdersModel {
+struct OrdersModel: Decodable {
     let id: String?
     let title: String?
     let dish: DishModel?
