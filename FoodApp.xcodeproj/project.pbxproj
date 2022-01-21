@@ -18,6 +18,7 @@
 		4F7108012758454F004FD575 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7107FF2758454F004FD575 /* PopularCollectionViewCell.xib */; };
 		4F712385276A8AD4003D8832 /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712384276A8AD4003D8832 /* DishDetailViewController.swift */; };
 		4F731CCF276AA15500E75092 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F731CCE276AA15500E75092 /* UIViewControllerExtension.swift */; };
+		4F8E75DB279B434C00180B78 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8E75DA279B434C00180B78 /* UserDefaultsExtension.swift */; };
 		4F92E5FA27485F6B00E228B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E5F927485F6B00E228B2 /* AppDelegate.swift */; };
 		4F92E5FC27485F6B00E228B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E5FB27485F6B00E228B2 /* SceneDelegate.swift */; };
 		4F92E60127485F6B00E228B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F92E5FF27485F6B00E228B2 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		4F7107FF2758454F004FD575 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F712384276A8AD4003D8832 /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
 		4F731CCE276AA15500E75092 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		4F8E75DA279B434C00180B78 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		4F92E5F627485F6B00E228B2 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F92E5F927485F6B00E228B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F92E5FB27485F6B00E228B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				4F92E6152748781F00E228B2 /* UIViewExtension.swift */,
 				4F99336027505FF8009B2187 /* UrlExtension.swift */,
 				4F731CCE276AA15500E75092 /* UIViewControllerExtension.swift */,
+				4F8E75DA279B434C00180B78 /* UserDefaultsExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				4F99336127505FF8009B2187 /* UrlExtension.swift in Sources */,
 				4FAC6965275EC7AF0086C557 /* SpecialCollectionViewCell.swift in Sources */,
 				4F99335F27505C43009B2187 /* CategoryModel.swift in Sources */,
+				4F8E75DB279B434C00180B78 /* UserDefaultsExtension.swift in Sources */,
 				4F92E61B274882B400E228B2 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,7 +612,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = FoodApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -637,7 +640,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = FoodApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
