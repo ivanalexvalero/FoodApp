@@ -14,6 +14,7 @@ enum Route {
     case fetchAllCategories
     case placeOrder(String)
     case fetchCategioriesDishes(String)
+    case fetchOrders
     
     var description: String {
         switch self {
@@ -23,6 +24,8 @@ enum Route {
             return "/orders/\(dishId)"
         case .fetchCategioriesDishes(let categoryId):
             return "/dishes/\(categoryId)"
+        case .fetchOrders:
+            return "/orders"
         }
     }
 }
