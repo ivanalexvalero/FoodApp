@@ -9,7 +9,7 @@ import Foundation
 
 
 enum Route {
-    static let baseUrl = "https://yummie.glitch.me"
+    static let baseUrl = "https://ursularesto.glitch.me"
     
     case fetchAllCategories
     case placeOrder(String)
@@ -19,13 +19,13 @@ enum Route {
     var description: String {
         switch self {
         case .fetchAllCategories:
-            return "/dish-categories"
+            return "/dish-categories.json"
         case .placeOrder(let dishId):
-            return "/orders/\(dishId)"
+            return "/orders/\(dishId).json"
         case .fetchCategioriesDishes(let categoryId):
-            return "/dishes/\(categoryId)"
+            return "/dishes/\(categoryId).json"
         case .fetchOrders:
-            return "/orders"
+            return "/orders.json"
         }
     }
 }

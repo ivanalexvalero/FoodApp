@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        title = "Food App"
+        title = "Ursula Resto"
         
         registerCells()
         
